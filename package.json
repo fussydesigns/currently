@@ -1,0 +1,23 @@
+{
+  "name": "currently",
+  "version": "0.0.3",
+  "description": "what the datetime is, now",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test.js"
+  },
+  "keywords": [
+    "time",
+    "datetime",
+    "date",
+    "day",
+    "month",
+    "year"
+  ],
+  "author": "Fussy Designs",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
