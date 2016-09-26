@@ -1,6 +1,6 @@
 {
   "name": "currently",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "what the datetime is, now",
   "main": "index.js",
   "scripts": {
