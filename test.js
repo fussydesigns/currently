@@ -33,6 +33,10 @@ describe('currently', function() {
         currently.date.should.not.equal(0);
         done();
     });
+    it('should write what day it is', function(done) {
+        console.log('today is a '+ currently.day);
+        done();
+    })
     it('should humanize the time', function(done) {
         var time = now.getHours() +':'+ now.getMinutes();
         console.log(time +', currently '+ currently.timeOfDay);

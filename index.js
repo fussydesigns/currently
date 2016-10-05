@@ -29,8 +29,17 @@ var humanizeTime = function(time) {
     }
 }
 
+var humanizeDay = function(day) {
+    var days = [
+        'Sunday', 'Monday', 'Tuesday', 'Wednesday',
+        'Thursday', 'Friday', 'Saturday'
+    ];
+    return days[day];
+}
+
 module.exports.full     = now;
 module.exports.year     = now.getFullYear();
 module.exports.month    = now.getMonth() + 1;
 module.exports.date     = now.getDate();
+module.exports.day      = humanizeDay(now.getDay());
 module.exports.timeOfDay = humanizeTime(now.getHours());

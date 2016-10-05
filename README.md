@@ -32,7 +32,6 @@ if (now.year != 2012) {
 ```
 var zero = require('onezero');
 zero(now.date) +'/'+ zero(now.month) +'.'+ now.year; // print 'DD/MM/YYYY':
-
 ```
 
 #### Humanize greetings
@@ -45,7 +44,6 @@ if (now !== 'night' || now != 'noon') {
 ## Roadmap
 
  * `.month // = 'December'`
- * `.day // = 'Thursday'`
  * `.short('month') // = 'Apr'`
  * `.short('day') // = 'Fri'`
  * `.display('mm/dd/yy') // intelligent formatting`
