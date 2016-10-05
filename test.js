@@ -36,7 +36,11 @@ describe('currently', function() {
     it('should write what day it is', function(done) {
         console.log('today is a '+ currently.day);
         done();
-    })
+    });
+    it('should write what month it is', function(done) {
+        console.log('it is '+ currently.monthName);
+        done();
+    });
     it('should humanize the time', function(done) {
         var time = now.getHours() +':'+ now.getMinutes();
         console.log(time +', currently '+ currently.timeOfDay);
