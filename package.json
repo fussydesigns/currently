@@ -1,7 +1,7 @@
 {
   "name": "currently",
-  "version": "0.0.5",
-  "description": "what the datetime is, now",
+  "version": "0.0.6",
+  "description": "what the datetime is, right now - but for humans",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test.js"
@@ -14,7 +14,11 @@
     "month",
     "year"
   ],
-  "author": "Fussy Designs",
+  "author": {
+    "email": "hello@fussydesigns.com",
+    "name": "Fussy Designs",
+    "url": "http://fussydesigns.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",

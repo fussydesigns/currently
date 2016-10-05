@@ -1,6 +1,6 @@
 # Currently
 
-Currently `.full` returns `new Date()` - with simplified extensions of `.year`, `.month` and `.date`.
+Currently `.full` returns `new Date()` - with simplified extensions of `.year`, `.month`, `.date`, and `.timeOfDay`.
 
 ## Notes
 
@@ -12,7 +12,7 @@ Currently `.full` returns `new Date()` - with simplified extensions of `.year`, 
 
 ```
 var now = require('currently');
-// now.full, now.year, now.month, now.date
+// now.full, now.year, now.month, now.date, now.timeOfDay
 ```
 
 #### Footer Copyright
@@ -30,17 +30,22 @@ if (now.year != 2012) {
 #### Today's date
 
 ```
-<script>
 var zero = require('onezero');
-// print 'DD/MM/YYYY':
-document.write(zero(now.date) +'/'+ zero(now.month) +'.'+ now.year);
-</script>
+zero(now.date) +'/'+ zero(now.month) +'.'+ now.year; // print 'DD/MM/YYYY':
+
+```
+
+#### Humanize greetings
+```
+if (now !== 'night' || now != 'noon') {
+  'Good '+ now.timeOfDay; // morning / afternoon / evening
+}
 ```
 
 ## Roadmap
 
- * `.name('month', 12) // = 'December'`
- * `.name('day', 4) // = 'Thursday'`
- * `.short('month', 4) // = 'Apr'`
- * `.short('day', 5) // = 'Fri'`
- * `.display('mm/dd/yy')` formatting
+ * `.month // = 'December'`
+ * `.day // = 'Thursday'`
+ * `.short('month') // = 'Apr'`
+ * `.short('day') // = 'Fri'`
+ * `.display('mm/dd/yy') // intelligent formatting`

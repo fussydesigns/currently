@@ -10,7 +10,7 @@ describe('currently', function() {
     it('should not be perfectly equal to now', function(done) {
         currently.full.should.not.equal(now);
         done();
-    })
+    });
     it('should display datetime on .full', function(done) {
         currently.full.should.exist;
         currently.full.toString().should.equal(now.toString());
@@ -31,6 +31,11 @@ describe('currently', function() {
         var date = now.getDate();
         currently.date.should.equal(date);
         currently.date.should.not.equal(0);
+        done();
+    });
+    it('should humanize the time', function(done) {
+        var time = now.getHours() +':'+ now.getMinutes();
+        console.log(time +', currently '+ currently.timeOfDay);
         done();
     });
 });
