@@ -30,8 +30,11 @@ if (now.year != 2012) {
 #### Today's date
 
 ```
+// print 'DD/MM/YYYY':
 var zero = require('onezero');
-zero(now.date) +'/'+ zero(now.month) +'.'+ now.year; // print 'DD/MM/YYYY':
+document.write(
+  zero(now.date) +'/'+ zero(now.month) +'/'+ now.year
+);
 ```
 
 #### Humanize greetings
@@ -43,7 +46,6 @@ if (now !== 'night' || now != 'noon') {
 
 ## Roadmap
 
- * `.month // = 'December'`
  * `.short('month') // = 'Apr'`
  * `.short('day') // = 'Fri'`
  * `.display('mm/dd/yy') // intelligent formatting`
